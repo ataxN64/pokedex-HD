@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Angular Module Call -->
+<html ng-app="Pokemon">
+  <head>
+    <!-- JQuery Framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <!-- Title of the WebSite -->
+    <title>Pokedex</title>
+    <!-- Pokeball Icon -->
+    <link rel="icon" href="https://vignette.wikia.nocookie.net/the-pokemon-sun-and-moon/images/4/4c/Pokeball.png/revision/latest?cb=20161123053945">
+    <!-- Style File Section -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Font Framework -->
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  </head>
+  <body ng-controller="ListadoPokemon">
+    <div class="container fullContainer">
+      <!-- Header Bar -->
+      <div class="row fullWidth">
+        <div class="col-md-12 text-center header">
+          <h4 class="title">NEW POKEDEX</h4>
+        </div>
+      </div>
+      <!-- Pokemon Container Info -->
+      <br/>
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-3 text-center col-sm-4"  ng-repeat="x in Pok | orderBy : 'id'" ng-if="x.data != undefined "> -->
+          <div class="col-md-3 text-center col-sm-4" ng-repeat="x in Poke | orderBy : 'id'" ng-if="x.data != undefined ">
+
+            <div class="divInfo">
+              <!-- Pokemon Picture -->
+              <!-- <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke"> -->
+              <img class="pokePicture" src="{{x.sprites.front_default}}" alt="Poke">
+            </div>
+            <!-- <div class="pokeName">{{x.data.name}}</div> -->
+            <div class="pokeName">{{x.data.name}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- AngularJS v1 Framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Function's File -->
+    <script src="script.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
